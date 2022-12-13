@@ -57,10 +57,13 @@ createApp({
                 }
             ],
 
-            imgSrcIndex : 0
+            imgSrcIndex : 0,
+            timer: ""
+
             
         }
     },
+
     methods: {
         getPrevSlide(){
             this.imgSrcIndex --;
@@ -76,8 +79,17 @@ createApp({
         },
         getClickedImg(indexClicked){
             this.imgSrcIndex = indexClicked;
+        },
+        getStopTimer(){
+            clearInterval(this.timer);
+        },
+        getRestartTimer(){
+            this.timer =setInterval(this.getNextSlide, 3000);
         }
+    },
 
+    mounted(){
+        this.timer =setInterval(this.getNextSlide, 3000);
     }
     
 }).mount("#app");

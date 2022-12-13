@@ -73,6 +73,9 @@ createApp({
             if(this.imgSrcIndex > this.slides.length -1){
                 this.imgSrcIndex = 0;
             }
+        },
+        getClickedImg(indexClicked){
+            this.imgSrcIndex = indexClicked;
         }
 
     }

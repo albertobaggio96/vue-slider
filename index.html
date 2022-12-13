@@ -26,7 +26,7 @@
                     </div>
                 </div>
 
-                <div class="thumbs" @mouseover="getStopTimer()" @mouseleave="getRestartTimer()">
+                <div class="thumbs" @mouseover="getStopTimer()" @mouseleave="getStartTimer()">
                     <div class="prev" @click="getPrevSlide()"></div>
                     <div class="next" @click="getNextSlide()"></div>
                     <div class="thumb" v-for="(slide, index) in slides" :class="(index === imgSrcIndex) ? `active` : `` " @click="getClickedImg(index)">

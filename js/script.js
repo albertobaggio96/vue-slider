@@ -83,13 +83,13 @@ createApp({
         getStopTimer(){
             clearInterval(this.timer);
         },
-        getRestartTimer(){
+        getStartTimer(){
             this.timer =setInterval(this.getNextSlide, 3000);
         }
     },
 
     mounted(){
-        this.timer =setInterval(this.getNextSlide, 3000);
+        this.getStartTimer();
     }
     
 }).mount("#app");
